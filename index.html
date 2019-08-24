@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Round number</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.google.com/specimen/Aclonica" rel='stylesheet'>
+        <script>
+            function validate()
+            {
+                var input = document.getElementById("key");
+                var paragraph = document.getElementById("display_main")
+                if(input.value.toLowerCase()=="answer".toLowerCase())
+                    paragraph.innerHTML = "Next Clue.";
+                else
+                    alert("Wrong Answer")
+            }
+        </script>
+        <style>
+            .container
+            {
+                font-family: Aclonica;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+	            top:0;
+	            bottom: 0;
+	            left: 0;
+	            right: 0;
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-image:url('treasure_back.jpg')">
+        <div class="container">
+        </div>
+        <div class="container content">
+            <div class="row">
+                <div class="col-12-lg" >
+                    <h1>Treasure Hunt</h1>
+                </div>
+                <div class="col-12-lg">
+                    <p id="display_main">
+                        <input class="form-control" id="key" placeholder="Enter the key.">
+                        <button type="button" class="btn btn-success" onclick="validate();">Submit</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
